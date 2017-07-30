@@ -20,8 +20,7 @@ class Question_Bank
         list.append(item)
         
         // skipping one step and just creating the quiz item inside the append function
-        list.append(Question(text: "A slug\'s blood is green.", correct_Answer: true))
-        
+        list.append(Question(text: "An ip address can be found using ipconfig in Windows or ifconfig in Linux/Unix", correct_Answer: true))
         list.append(Question(text: "Approximately one quarter of human bones are in the feet.", correct_Answer: true))
         
         list.append(Question(text: "The total surface area of two human lungs is approximately 70 square metres.", correct_Answer: true))
