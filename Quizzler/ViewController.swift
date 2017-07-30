@@ -52,7 +52,7 @@ class ViewController: UIViewController {
 
     func nextQuestion()
     {
-        if Question_Number <= 12
+        if Question_Number <= 13
         {
             questionLabel.text = all_Questions.list[Question_Number].question_Text
         }
