@@ -13,18 +13,19 @@ class ViewController: UIViewController {
     //Place your instance variables here
     let all_Questions = Question_Bank()
     var picked_Answer: Bool = false
+    var Question_Number: Int = 0
+    var quiz_score: Int = 0
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet var progressBar: UIView!
     @IBOutlet weak var progressLabel: UILabel!
-    var Question_Number: Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let first_Question = all_Questions.list[Question_Number]
-        questionLabel.text = first_Question.question_Text
+        nextQuestion()
         
     }
 
@@ -46,15 +47,19 @@ class ViewController: UIViewController {
     
     
     func updateUI() {
-      
+      scoreLabel.text = "Correct Answers: \(quiz_score)"
+        progressLabel.text = "\(Question_Number)/26"
+        progressBar.frame.size.width = (view.frame.size.width / 26) * CGFloat(Question_Number + 1)
     }
     
 
     func nextQuestion()
     {
-        if Question_Number <= 13
+        if Question_Number <= 26
         {
             questionLabel.text = all_Questions.list[Question_Number].question_Text
+            
+            updateUI() //This will update the score on the ui
         }
         else
         {
@@ -64,6 +69,7 @@ class ViewController: UIViewController {
             })
             user_alert.addAction(Restart_Action)
             present(user_alert, animated: true, completion: nil)
+            quiz_score = 0 //This is needed to rese the score to zero after the  restart is called
         }
     }
     
@@ -74,6 +80,7 @@ class ViewController: UIViewController {
         if correct_Answer == picked_Answer
         {
             print("You got it");
+            quiz_score += 1
         }
         else
         {
