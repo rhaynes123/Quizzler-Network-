@@ -48,14 +48,14 @@ class ViewController: UIViewController {
     
     func updateUI() {
       scoreLabel.text = "Correct Answers: \(quiz_score)"
-        progressLabel.text = "\(Question_Number)/45"
-        progressBar.frame.size.width = (view.frame.size.width / 45) * CGFloat(Question_Number + 1)
+        progressLabel.text = "\(Question_Number)/60"
+        progressBar.frame.size.width = (view.frame.size.width / 61) * CGFloat(Question_Number + 1)
     }
     
 
     func nextQuestion()
     {
-        if Question_Number <= 45
+        if Question_Number <= 60
         {
             questionLabel.text = all_Questions.list[Question_Number].question_Text
             
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
     
     func checkAnswer()
     {
-        let correct_Answer = all_Questions.list[0].question_Answer
+        let correct_Answer = all_Questions.list[Question_Number].question_Answer
         if correct_Answer == picked_Answer
         {
             print("You got it");

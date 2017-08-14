@@ -121,9 +121,40 @@ class Question_Bank
         
         list.append(Question(text: "Printer spooler is a great place to check a backed up print que.", correct_Answer: true))
         
-        //46
+        //46-50
         list.append(Question(text: "Printer Properties is a great place to check why a user might get an Access Denied message from a network printer.", correct_Answer: true))
         
+        list.append(Question(text: "Check the fuser on any Networked laser printer that has smudges in output.", correct_Answer: true))
+        
+        list.append(Question(text: "Application, presentation, session, transport, network, data link, physical are the 7 layers of the OSI model from top to bottom.", correct_Answer: true))
+        
+        list.append(Question(text: "Signal Encoding occurs at the Network Layer of the OSI model.", correct_Answer: false))//Correct Answer the physical layer
+        
+        list.append(Question(text: "Any router can forward packets using logical addressing for either IPV4 or IPV6.", correct_Answer: true))
+        //51-55
+        list.append(Question(text: "All memory modules use the same pin position.", correct_Answer: false))//Correct Answer both are 240 pins but the position is different an all memory slots are keyed to prevent mis match
+        
+        list.append(Question(text: "Single and Double sided memory modules have 64 bit data buses even those that are none ECC.", correct_Answer: true))
+        
+        list.append(Question(text: "220 meters is the max limit for 1000BASE-SX using MMF 62.5/125/ 850nm cabling.", correct_Answer: true))
+        
+        list.append(Question(text: "fe80::c8b9:80b2:a4c:1093%8 is not the link local address in IPV6.", correct_Answer: false)) //Correct answer it is the link local
+        
+        list.append(Question(text: "802.11a and 802.11n are good to implement over 2.4GHz for WIFI devices.", correct_Answer: true))
+        //56-60
+        list.append(Question(text: "Air Gap is a non-secure means of segmenting a honeypot.", correct_Answer: false)) //Correct answer false it is very secure
+        
+        list.append(Question(text: "802.1X is a great authentication protocol.", correct_Answer: true))
+        
+        list.append(Question(text: "Load balancing is a good tool for web based services to never lose signal.", correct_Answer: true))
+        
+        list.append(Question(text: "PPTP supports the EAP and MS-CHAP authentication protocol.", correct_Answer: true))
+        
+        list.append(Question(text: "After SSL has been enabled you must obtain a digital certificate.", correct_Answer: true))
+        //61-
+        list.append(Question(text: "802.1X is a great authentication protocol.", correct_Answer: true))
+
+
 
     }
 }
